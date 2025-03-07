@@ -48,7 +48,8 @@
         }
         ]
  , trigger: 'on press'
-}})],            childrenItems:[(...args:any) => <Elements.Text pass={{
+}})],            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             '{}'
           ],
@@ -63,11 +64,32 @@
 
           args,
 
+        }}/>, (...args:any) => <Elements.FlatList2 pass={{
+          elementProperties: [
+            {}
+          ],
+
+          pData: '',
+
+          itemElements: [
+            
+              (...args) => {
+                return (
+                  <RN.Text>
+                    Adicione os campos que quer mostrar aqui.
+                  </RN.Text>
+                );
+              }
+              
+          ],
+
+          args,
         }}/>],
 
             args,
           }}/>
-        , (...args:any) => <Elements.FlatList2 pass={{
+        , 
+        (...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
             '{ItemSeparatorComponent: "$var_all.Comp1"}'
           ],
@@ -94,6 +116,21 @@
           ],
 
           args,
+        }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            "Escreva..."
+          ],
+
+          args,
+
         }}/>],
 
           functions:[()=>{}],
