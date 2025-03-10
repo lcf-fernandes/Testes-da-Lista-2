@@ -29,109 +29,22 @@
         (...args: any) => <Elements.Screen3 pass={{
           pathScreen:"home",
 
-          styles:['{ backgroundColor: "red", alignItems: "center", justifyContent: "center", flex: 1 }'],
+          styles:['{ backgroundColor: "white", width: "100%", height: "100%", alignItems: "center", justifyContent: "center" }'],
 
-          screenElements:[
-        
+          screenElements:[() => {
+                  const textStyle = {
+                    fontSize: 20,
+                    color: '#fff2',
+                    textAlign:'center',
+                    maxWidth: 200,
+                    // maxWidth: '200px'<= #ATTENTION: Native ERROR! No string!
+                  };
 
-          (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{ disabled: "$var_all.cond1", onHoverIn: "$var_all.func1", children: "$var_all.Comp1" }'],
-
-            styles:['{ backgroundColor: "$var_all.colors.primary", width: 120, height: 40, marginTop: 60, alignItems: "center", justifyContent: "center" }'],
-
-            functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("sc2");
-        }
-        ]
- , trigger: 'on press'
-}})],            childrenItems:[
-        (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            'Ir p/ Tela 2'
-          ],
-
-          args,
-
-        }}/>, (...args:any) => <Elements.FlatList2 pass={{
-          elementProperties: [
-            {}
-          ],
-
-          pData: '',
-
-          itemElements: [
-            
-              (...args) => {
-                return (
-                  <RN.Text>
-                    Adicione os campos que quer mostrar aqui.
-                  </RN.Text>
-                );
-              }
-              
-          ],
-
-          args,
-        }}/>],
-
-            args,
-          }}/>
-        , 
-        (...args:any) => <Elements.FlatList2 pass={{
-          elementProperties: [
-            '{ItemSeparatorComponent: "$var_all.Comp1"}'
-          ],
-
-          pData: 'all.lists.lt1',
-
-          itemElements: [
-            (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            '$arg_name'
-          ],
-
-          args,
-
-        }}/>
-          ],
-
-          args,
-        }}/>, (...args:any) => <Elements.Text pass={{
-          arrProps: [
-            '{}'
-          ],
-
-          arrStyles: [
-            { color: 'black', fontSize: 12, }
-          ],
-
-          children: [
-            "Escreva..."
-          ],
-
-          args,
-
-        }}/>],
+                  return (
+                    <RN.Text style={textStyle}>
+                      {'Adicione Elementos nessa tela!'}
+                    </RN.Text>);
+                }],
 
           functions:[()=>{}],
 
