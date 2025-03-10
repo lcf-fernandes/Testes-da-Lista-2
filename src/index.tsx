@@ -46,7 +46,22 @@
 
             styles:['{ width: "50px", padding: "10px", alignItems: "center", jutifyContent: "center" }'],
 
-            functions:[()=>{}],            childrenItems:[() =><></>],
+            functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            'TESTE'
+          ],
+
+          args,
+
+        }}/>],
 
             args,
           }}/>
