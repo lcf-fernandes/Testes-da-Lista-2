@@ -78,7 +78,7 @@
     (...args:any) => <Elements.ImageBox pass={{
       elementsProperties:[{}],
 
-      styles:[var style = { width: "230px", heght: "80px" }],
+      styles:[{ width: "230px", heght: "80px" }],
 
       URIvariablePath:['https://firebasestorage.googleapis.com/v0/b/devs-tests-95208.appspot.com/o/images%2FlogoFlaxboll.png?alt=media&token=0b90ef25-b31f-443a-8ef3-59084b02bf41'],
 
